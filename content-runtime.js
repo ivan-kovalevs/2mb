@@ -33,11 +33,13 @@
   if(emblem)document.querySelectorAll('[data-cms-linked-image="hero-emblem"]').forEach(node=>node.src=emblem.src);
   links.forEach(({id,node})=>{
     if(grid.contains(node)||node.matches('.modal-anketa-btn'))return;
-    const url=content.links[id]??node.getAttribute('href');
+    const url=node.dataset.publicHref??content.links[id]??node.getAttribute('href');
     node.setAttribute('href',url||'#');
     if(url&&url!=='#'){node.removeAttribute('data-pending-link');node.removeAttribute('aria-disabled');}
     else{node.setAttribute('data-pending-link','');node.setAttribute('aria-disabled','true');}
   });
+  // Remove these after resolving legacy image/link IDs to preserve every other content slot.
+  document.querySelectorAll('.social,.burger-social').forEach(node=>node.remove());
   const cards=[];
   for(const vacancy of content.vacancies){
     if(!vacancy.title.trim())continue;
