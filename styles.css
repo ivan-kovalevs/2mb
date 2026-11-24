@@ -166,6 +166,16 @@ img{display:block;max-width:100%}
 .stat-destroyed{font-family:var(--f1);font-weight:400;font-size:clamp(11px,1.2vw,14px);color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.06em;opacity:0;transition:opacity .4s ease;display:flex;align-items:center;justify-content:center;gap:.3em}
 .stat-destroyed.vis{opacity:1}
 
+/* Seven equal cards: four above, three centered below. */
+@media(min-width:768px){
+  .results-grid{grid-template-columns:repeat(8,minmax(0,1fr));column-gap:clamp(16px,2vw,32px)}
+  .results-grid .stat{grid-column:span 2}
+  .results-grid .stat:nth-child(5){grid-column:2 / span 2;grid-row:4 / span 3}
+  .results-grid .stat:nth-child(6){grid-column:4 / span 2;grid-row:4 / span 3}
+  .results-grid .stat:nth-child(7){grid-column:6 / span 2;grid-row:4 / span 3}
+  .results-grid .stat-label{font-size:clamp(18px,2vw,28px);line-height:1.2;overflow-wrap:normal}
+}
+
 /* ─── CAROUSEL COMMON ───────────────────────────── */
 .cs-sec,.cp-sec{padding:var(--py) var(--px)}
 .car-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;flex-wrap:wrap;gap:12px;position:relative;z-index:1}
@@ -668,6 +678,7 @@ img{display:block;max-width:100%}
   .results-grid .stat-num{font-size:clamp(30px,8.5vw,36px);font-variant-numeric:tabular-nums}
   .results-grid .stat-num-inner[data-target="∞"]{font-size:1.1em}
   .results-grid .results-icon{height:1.5em;top:0}
+  .results-grid .stat:last-child{grid-column:1 / -1;min-height:108px}
   /* ── Commanders mobile ── */
   .cmd-sec{padding:50px 0 var(--py);overflow-x:clip}
   .cmd-head{display:flex;justify-content:space-between;align-items:flex-start;padding:0 16px 16px;opacity:1;transform:none}
