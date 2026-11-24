@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html data-content-prerendered="" lang="uk">
 <head>
   <title>2 МБ | Робоча версія</title>
   <meta name="description" content="Чернетка сайту 2 МБ">
   <meta property="og:title" content="2 МБ | Робоча версія">
   <meta property="og:image" content="assets/images/hero/hero-bg.jpg">
-<meta charset="utf-8"/>
-<meta name="robots" content="noindex,nofollow"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-<link rel="stylesheet" href="reset.css"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -18,8 +18,8 @@
 <canvas id="sparks-canvas"></canvas>
 <!-- ═══ SVG SPRITE ══════════════════════════════════════════ -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-  <symbol id="icon-arrow" viewBox="0 0 24 24"><polyline points="9,6 15,12 9,18"/></symbol>
-  <symbol id="icon-play"  viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><polyline points="9,6 15,12 9,18" /></symbol>
+  <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></symbol>
 </svg>
 <div class="page">
 
@@ -28,11 +28,11 @@
   <div class="header-inner">
     <a class="brand" href="#hero" aria-label="На головну" onclick="goTo('hero');return false">
       <div class="brand-icon">
-        <img src="assets/images/ui/emblem-hero.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"/>
+        <img src="media/78ea24c7-02e9-4144-ad98-cf7769512fff.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'">
       </div>
       <div class="brand-text">
         <span class="brand-name">2 Механізований Батальйон</span>
-        <span class="brand-sub">[Назва бригади]</span>
+        <span class="brand-sub">Окрема Президентська Бригада</span>
       </div>
     </a>
 
@@ -45,10 +45,7 @@
       <button class="nav-btn" data-target="contacts">Контакти</button>
     </nav>
 
-    <div class="social" hidden>
-      <a class="social-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/images/ui/telegram.svg" alt="Telegram"/></a>
-      <a class="social-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/images/ui/facebook.svg" alt="Facebook"/></a>
-    </div>
+    
 
     <button class="burger" id="burger" aria-label="Меню">
       <div class="burger-lines"><span></span><span></span><span></span></div>
@@ -57,14 +54,14 @@
 </header>
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-track">
-    <span class="ticker-item">[Цінність 1]</span><span class="ticker-sep">·</span>
-    <span class="ticker-item">[Цінність 2]</span><span class="ticker-sep">·</span>
-    <span class="ticker-item">[Цінність 3]</span><span class="ticker-sep">·</span>
-    <span class="ticker-item">[Гасло]</span><span class="ticker-sep">·</span>
-    <span class="ticker-item">[Цінність 1]</span><span class="ticker-sep">·</span>
-    <span class="ticker-item">[Цінність 2]</span><span class="ticker-sep">·</span>
-    <span class="ticker-item">[Цінність 3]</span><span class="ticker-sep">·</span>
-    <span class="ticker-item">[Гасло]</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">В бою — слава, вдома — повага</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">В бою — слава, вдома — повага</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">В бою — слава, вдома — повага</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">В бою — слава, вдома — повага</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">В бою — слава, вдома — повага</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">В бою — слава, вдома — повага</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">В бою — слава, вдома — повага</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">В бою — слава, вдома — повага</span><span class="ticker-sep">·</span>
   </div>
 </div>
 
@@ -79,36 +76,34 @@
   <button class="nav-btn" data-target="faq" onclick="burgerNav(this)">Часті питання</button>
   <button class="nav-btn" data-target="contacts" onclick="burgerNav(this)">Контакти</button>
   <a class="burger-anketa" href="https://docs.google.com/forms/d/1ExV2jJ9bbDuOV51WJdUhiMRHRv8LfsZ7qB9zt5IqTmc/preview" data-public-href="https://docs.google.com/forms/d/1ExV2jJ9bbDuOV51WJdUhiMRHRv8LfsZ7qB9zt5IqTmc/preview" target="_blank" rel="noopener" onclick="closeBurger()">Заповнити анкету</a>
-  <div class="burger-social" hidden>
-    <a class="social-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/images/ui/telegram.svg" alt="Telegram"/></a>
-    <a class="social-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/images/ui/facebook.svg" alt="Facebook"/></a>
-  </div>
+  
 </nav>
 
 <!-- ═══ HERO ═════════════════════════════════════════ -->
 <section id="hero">
   <div class="hero">
     <div class="hero-bg">
-      <img src="assets/images/hero/hero-bg.webp" alt="" onerror="this.parentNode.style.background='radial-gradient(ellipse at 50% 30%,rgba(100,80,30,.35) 0%,#0b0c0f 70%)'"/>
+      <img loading="eager" fetchpriority="high" src="media/bc08a0a0-4ede-40de-915b-e39af3bb92eb.jpg" alt="" onerror="this.parentNode.style.background='radial-gradient(ellipse at 50% 30%,rgba(100,80,30,.35) 0%,#0b0c0f 70%)'">
       <div class="hero-bg-grad"></div>
     </div>
     <div class="hero-radial"></div>
     <div class="hero-content">
       <div class="hero-emblem">
-        <img src="assets/images/ui/emblem-hero.svg" alt="Емблема батальйону" onerror="this.style.display='none'"/>
+        <img fetchpriority="high" src="media/78ea24c7-02e9-4144-ad98-cf7769512fff.svg" alt="Емблема батальйону" onerror="this.style.display='none'">
       </div>
       <div class="hero-titles">
         <h1 class="hero-h1">2 МЕХАНІЗОВАНИЙ БАТАЛЬЙОН</h1>
-        <p class="hero-hsub">[ПОВНА НАЗВА БРИГАДИ]</p>
-        <p class="hero-hsub-mobile">[Назва бригади]</p>
+        <p class="hero-hsub">ОКРЕМОЇ ПРЕЗИДЕНТСЬКОЇ БРИГАДИ ІМ. ГЕТЬМАНА БОГДАНА ХМЕЛЬНИЦЬКОГО</p>
+        <p class="hero-hsub-mobile">ОКРЕМОЇ ПРЕЗИДЕНТСЬКОЇ БРИГАДИ 
+ІМ. ГЕТЬМАНА БОГДАНА ХМЕЛЬНИЦЬКОГО</p>
       </div>
       <div class="hero-values">
         <div class="hero-row">
-          <span class="hero-val">[Цінність 1]</span>
-          <span class="hero-val">[Цінність 2]</span>
-          <span class="hero-val">[Цінність 3]</span>
+          <span class="hero-val"></span>
+          <span class="hero-val"></span>
+          <span class="hero-val"></span>
         </div>
-        <div class="hero-row"><span class="hero-seek">[Гасло]</span></div>
+        <div class="hero-row"><span class="hero-seek">В бою — слава, вдома — повага</span></div>
       </div>
     </div>
   </div>
@@ -123,34 +118,34 @@
     <div class="reveal"><h2 class="sec-heading">Наші результати</h2></div>
     <div class="results-grid" id="results-grid">
       <div class="stat">
-        <span class="stat-label">[Показник 1]</span>
-        <span class="stat-destroyed">[Опис]<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
-        <div class="stat-num"><span class="stat-num-inner" data-target="—">—</span></div>
+        <span class="stat-label">ворожа піхота</span>
+        <span class="stat-destroyed">знищена<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="1104">1104</span></div>
       </div>
       <div class="stat">
-        <span class="stat-label">[Показник 2]</span>
-        <span class="stat-destroyed">[Опис]<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
-        <div class="stat-num"><span class="stat-num-inner" data-target="—">—</span></div>
+        <span class="stat-label">важка бронетехніка</span>
+        <span class="stat-destroyed">знищена<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="44">44</span></div>
       </div>
       <div class="stat">
-        <span class="stat-label">[Показник 3]</span>
-        <span class="stat-destroyed">[Опис]<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
-        <div class="stat-num"><span class="stat-num-inner" data-target="—">—</span></div>
+        <span class="stat-label">бронетехніка</span>
+        <span class="stat-destroyed">трофейна<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="4">4</span></div>
       </div>
       <div class="stat">
-        <span class="stat-label">[Показник 4]</span>
-        <span class="stat-destroyed">[Опис]<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
-        <div class="stat-num"><span class="stat-num-inner" data-target="—">—</span></div>
+        <span class="stat-label">артилерія</span>
+        <span class="stat-destroyed">знищена<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="7">7</span></div>
       </div>
       <div class="stat">
-        <span class="stat-label" data-cms-text="t1000">[Показник 5]</span>
-        <span class="stat-destroyed"><span data-cms-text="t1001">[Опис]</span><img src="assets/images/ui/results.png" data-cms-image="i1000" alt="" class="results-icon"></span>
-        <div class="stat-num"><span class="stat-num-inner" data-target="—" data-cms-text="t1002">—</span></div>
+        <span class="stat-label" data-cms-text="t1000">полонених</span>
+        <span class="stat-destroyed"><span data-cms-text="t1001">загарбників</span><img src="assets/images/ui/results.png" data-cms-image="i1000" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="5" data-cms-text="t1002">5</span></div>
       </div>
       <div class="stat">
-        <span class="stat-label" data-cms-text="t1003">[Показник 6]</span>
-        <span class="stat-destroyed"><span data-cms-text="t1004">[Опис]</span><img src="assets/images/ui/results.png" data-cms-image="i1001" alt="" class="results-icon"></span>
-        <div class="stat-num"><span class="stat-num-inner" data-target="—" data-cms-text="t1005">—</span></div>
+        <span class="stat-label" data-cms-text="t1003">автомобільна техніка</span>
+        <span class="stat-destroyed"><span data-cms-text="t1004">Знищено</span><img src="assets/images/ui/results.png" data-cms-image="i1001" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="∞" data-cms-text="t1005">∞</span></div>
       </div>
     </div>
   </div>
@@ -162,16 +157,16 @@
 <section class="cs-sec" id="combat-system">
   <div class="car-header">
     <div class="car-title-block reveal">
-      <h2 class="sec-heading">Єдина Система Бою</h2>
-      <p style="font-family:var(--f1);font-weight:500;color:var(--c-white);line-height:33px" class="car-subtitle">[Підзаголовок розділу]</p>
+      <h2 class="sec-heading">Наші люди</h2>
+      <p style="font-family:var(--f1);font-weight:500;color:var(--c-white);line-height:33px" class="car-subtitle">Системний підхід до підготовки, та бою</p>
     </div>
     <div class="car-controls">
       <button class="car-btn prev off" id="cs-prev" onclick="csMove(-1)" aria-label="Назад">
-        <svg><use href="#icon-arrow"/></svg>
+        <svg><use href="#icon-arrow" /></svg>
       </button>
       <div class="car-dots" id="cs-dots"></div>
       <button class="car-btn next" id="cs-next" onclick="carouselEdgeBtn(csMove,'combat-system',1)" aria-label="Вперед">
-        <svg><use href="#icon-arrow"/></svg>
+        <svg><use href="#icon-arrow" /></svg>
       </button>
     </div>
   </div>
@@ -179,18 +174,18 @@
     <div class="c-track" id="cs-track">
       <!-- Slide 1 -->
       <div class="c-slide">
-        <img src="assets/images/gallery/system-1.webp" alt="Система бою 1" onerror="this.style.background='rgba(255,255,255,.05)'"/>
-        <img src="assets/images/gallery/system-2.webp" alt="Система бою 2" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+        <img src="media/4d1be6f2-c3f0-42dd-9833-15975229a1ad.jpg" alt="Система бою 1" onerror="this.style.background='rgba(255,255,255,.05)'">
+        <img src="media/2f7c47d5-f366-454e-ab9c-bbe77a86711a.jpg" alt="Система бою 2" onerror="this.style.background='rgba(255,255,255,.04)'">
       </div>
       <!-- Slide 2 -->
       <div class="c-slide">
-        <img src="assets/images/gallery/system-3.webp" alt="Система бою 3" onerror="this.style.background='rgba(255,255,255,.05)'"/>
-        <img src="assets/images/gallery/system-4.webp" alt="Система бою 4" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+        <img src="media/22f0afc9-e0c9-4ebe-8466-f2bc821f7c77.jpg" alt="Система бою 3" onerror="this.style.background='rgba(255,255,255,.05)'">
+        <img src="media/0b8af932-383c-4a7b-b99c-eb1c4610ea89.jpg" alt="Система бою 4" onerror="this.style.background='rgba(255,255,255,.04)'">
       </div>
       <!-- Slide 3 -->
       <div class="c-slide">
-        <img src="assets/images/gallery/system-5.webp" alt="Система бою 5" onerror="this.style.background='rgba(255,255,255,.05)'"/>
-        <img src="assets/images/gallery/system-6.webp" alt="Система бою 6" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+        <img src="media/ed9f5f8a-b393-4642-ba22-896d3dec26ee.jpg" alt="Система бою 5" onerror="this.style.background='rgba(255,255,255,.05)'">
+        <img src="media/f1378cba-4dbe-433e-8be5-8c7641d757cb.jpg" alt="Система бою 6" onerror="this.style.background='rgba(255,255,255,.04)'">
       </div>
     </div>
   </div>
@@ -205,11 +200,11 @@
     <h2 class="sec-heading reveal">Бойовий шлях</h2>
     <div class="car-controls">
       <button class="car-btn prev off" id="cp-prev" onclick="cpMove(-1)" aria-label="Назад">
-        <svg><use href="#icon-arrow"/></svg>
+        <svg><use href="#icon-arrow" /></svg>
       </button>
       <div class="car-dots" id="cp-dots"></div>
       <button class="car-btn next" id="cp-next" onclick="carouselEdgeBtn(cpMove,'combat-path',1)" aria-label="Вперед">
-        <svg><use href="#icon-arrow"/></svg>
+        <svg><use href="#icon-arrow" /></svg>
       </button>
     </div>
   </div>
@@ -217,49 +212,65 @@
     <div class="tl-items" id="tl-items">
       <div class="tl-line"></div>
       <div class="tl-item">
-        <span class="tl-name">[Подія 1]</span>
+        <span title="Створення" class="tl-name">Створення</span>
         <span class="tl-dot"></span>
-        <span class="tl-date">[Дата]</span>
+        <span class="tl-date">2022</span>
       </div>
       <div class="tl-item">
-        <span class="tl-name">[Подія 2]</span>
+        <span title="Оборона Сумщини 
+та Харківщини" class="tl-name">Оборона Сумщини 
+та Харківщини</span>
         <span class="tl-dot"></span>
-        <span class="tl-date">[Дата]</span>
+        <span class="tl-date">2022</span>
       </div>
       <div class="tl-item">
-        <span class="tl-name">[Подія 3]</span>
+        <span title="Оборона Донеччини
+н.п. Суха Балка" class="tl-name">Оборона Донеччини
+н.п. Суха Балка</span>
         <span class="tl-dot"></span>
-        <span class="tl-date">[Дата]</span>
+        <span class="tl-date">2022 – 2023</span>
       </div>
       <div class="tl-item">
-        <span class="tl-name">[Подія 4]</span>
+        <span title="Бої за н/п Авдіївка 
+та н/п Красногорівка" class="tl-name">Бої за н/п Авдіївка 
+та н/п Красногорівка</span>
         <span class="tl-dot"></span>
-        <span class="tl-date">[Дата]</span>
+        <span class="tl-date">2023 – 2024</span>
       </div>
       <div class="tl-item">
-        <span class="tl-name" data-cms-text="t1010">[Подія 5]</span>
+        <span title="Оборона 
+н.п. Красногорівка" class="tl-name" data-cms-text="t1010">Оборона 
+н.п. Красногорівка</span>
         <span class="tl-dot"></span>
-        <span class="tl-date" data-cms-text="t1011">[Дата]</span>
+        <span class="tl-date" data-cms-text="t1011">2024</span>
       </div>
       <div class="tl-item">
-        <span class="tl-name" data-cms-text="t1012">[Подія 6]</span>
+        <span title="Битва за
+м. Вовчанськ" class="tl-name" data-cms-text="t1012">Битва за
+м. Вовчанськ</span>
         <span class="tl-dot"></span>
-        <span class="tl-date" data-cms-text="t1013">[Дата]</span>
+        <span class="tl-date" data-cms-text="t1013">2024</span>
       </div>
       <div class="tl-item">
-        <span class="tl-name" data-cms-text="t1014">[Подія 7]</span>
+        <span title="Бої за н.п. Цукурине
+та н.п. Новодмитрівка " class="tl-name" data-cms-text="t1014">Бої за н.п. Цукурине
+та н.п. Новодмитрівка </span>
         <span class="tl-dot"></span>
-        <span class="tl-date" data-cms-text="t1015">[Дата]</span>
+        <span class="tl-date" data-cms-text="t1015">2024</span>
       </div>
       <div class="tl-item">
-        <span class="tl-name" data-cms-text="t1016">[Подія 8]</span>
+        <span title="Битва за
+м. Торецьк" class="tl-name" data-cms-text="t1016">Битва за
+м. Торецьк</span>
         <span class="tl-dot"></span>
-        <span class="tl-date" data-cms-text="t1017">[Дата]</span>
+        <span class="tl-date" data-cms-text="t1017">2024 – 2025</span>
       </div>
       <div class="tl-item">
-        <span class="tl-name" data-cms-text="t1018">[Подія 9]</span>
+        <span title="Оборона
+н.п. Костянтинівка " class="tl-name" data-cms-text="t1018">Оборона
+н.п. Костянтинівка </span>
         <span class="tl-dot"></span>
-        <span class="tl-date" data-cms-text="t1019">[Дата]</span>
+        <span class="tl-date" data-cms-text="t1019">2025</span>
       </div>
       <div class="tl-item tl-ongoing">
         <span class="tl-name">Боротьба
@@ -275,18 +286,18 @@
     <div class="c-track" id="cp-track">
       <!-- Slide 1 -->
       <div class="c-slide">
-        <img src="assets/images/gallery/path-1.webp" alt="Бойовий шлях 1" onerror="this.style.background='rgba(255,255,255,.05)'"/>
-        <img src="assets/images/gallery/path-2.webp" alt="Бойовий шлях 2" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+        <img src="media/fb1d5883-fe2e-4c23-994f-f391d22d7efd.jpg" alt="Бойовий шлях 1" onerror="this.style.background='rgba(255,255,255,.05)'">
+        <img src="media/44c3db8b-4c83-4d7a-8580-251d47bd1abf.jpg" alt="Бойовий шлях 2" onerror="this.style.background='rgba(255,255,255,.04)'">
       </div>
       <!-- Slide 2 -->
       <div class="c-slide">
-        <img src="assets/images/gallery/path-3.webp" alt="Бойовий шлях 3" onerror="this.style.background='rgba(255,255,255,.05)'"/>
-        <img src="assets/images/gallery/path-4.webp" alt="Бойовий шлях 4" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+        <img src="media/605081d7-6ca2-43d7-ac64-7f2a577af651.jpg" alt="Бойовий шлях 3" onerror="this.style.background='rgba(255,255,255,.05)'">
+        <img src="media/a81ef16c-70db-4381-9182-9a83b96f7807.jpg" alt="Бойовий шлях 4" onerror="this.style.background='rgba(255,255,255,.04)'">
       </div>
       <!-- Slide 3 -->
       <div class="c-slide">
-        <img src="assets/images/gallery/path-5.webp" alt="Бойовий шлях 5" onerror="this.style.background='rgba(255,255,255,.05)'"/>
-        <img src="assets/images/gallery/path-6.webp" alt="Бойовий шлях 6" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+        <img src="media/81aff5cb-ed6d-4fa4-854f-099167d2ed98.jpg" alt="Бойовий шлях 5" onerror="this.style.background='rgba(255,255,255,.05)'">
+        <img src="media/f31871be-62b9-40cc-ae22-a89d3a4c5602.jpg" alt="Бойовий шлях 6" onerror="this.style.background='rgba(255,255,255,.04)'">
       </div>
     </div>
   </div>
@@ -300,59 +311,59 @@
   <div class="cmd-head reveal">
     <div class="cmd-head-titles">
       <h2 class="sec-heading">Наші командири</h2>
-      <p class="cmd-m-subtitle" id="cmd-subtitle">[Посада 1]</p>
+      <p class="cmd-m-subtitle" id="cmd-subtitle">Командир батальйону, підполковник</p>
     </div>
     <div class="car-controls cmd-car-controls">
       <button class="car-btn prev off" id="cmd-prev" onclick="cmdMove(-1)" aria-label="Назад">
-        <svg><use href="#icon-arrow"/></svg>
+        <svg><use href="#icon-arrow" /></svg>
       </button>
       <button class="car-btn next" id="cmd-next" onclick="carouselEdgeBtn(cmdMove,'commanders',1)" aria-label="Вперед">
-        <svg><use href="#icon-arrow"/></svg>
+        <svg><use href="#icon-arrow" /></svg>
       </button>
     </div>
     <div class="car-dots cmd-dots-m" id="cmd-dots-m"></div>
   </div>
   <div class="cmd-list" id="cmd-list">
 
-    <article class="cmd-card" data-rank="[Посада 1]">
+    <article class="cmd-card" data-rank="Командир батальйону, підполковник">
       <div class="cmd-photo">
         <div class="cmd-photo-overlay"></div>
-        <img class="bg" src="assets/images/commanders/cmd-1.webp" alt="Фото командира" onerror="this.style.display='none'"/>
-        <div class="cmd-badge"><img src="assets/images/ui/emblem-hero.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"/></div>
+        <img class="bg" src="media/86f38649-9044-4488-aba7-bd291b853822.jpg" alt="Фото командира" onerror="this.style.display='none'">
+        <div class="cmd-badge"><img src="media/78ea24c7-02e9-4144-ad98-cf7769512fff.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"></div>
       </div>
       <div class="cmd-info">
-        <h3 class="cmd-name">[Ім’я 1]</h3>
-        <p class="cmd-rank">[Посада 1]</p>
+        <h3 class="cmd-name">Самурай</h3>
+        <p class="cmd-rank">Командир батальйону, підполковник</p>
 
-        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>[Цитата командира]</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
+        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>Ми сюди приходимо не помирати за Україну, а нищити ворога і жити.</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
         <button class="cmd-bio-btn" onclick="openCmdModal('cmd-1')">Читати біо</button>
       </div>
     </article>
 
-    <article class="cmd-card" data-rank="[Посада 2]">
+    <article class="cmd-card" data-rank="Начальник штабу, майор">
       <div class="cmd-photo">
         <div class="cmd-photo-overlay"></div>
-        <img class="bg" src="assets/images/commanders/cmd-2.webp" alt="Фото командира" onerror="this.style.display='none'"/>
-        <div class="cmd-badge"><img src="assets/images/ui/emblem-hero.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"/></div>
+        <img class="bg" src="media/628d4ea3-2efe-4279-a02b-5fdd6fd3643e.jpg" alt="Фото командира" onerror="this.style.display='none'">
+        <div class="cmd-badge"><img src="media/78ea24c7-02e9-4144-ad98-cf7769512fff.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"></div>
       </div>
       <div class="cmd-info">
-        <h3 class="cmd-name">[Ім’я 2]</h3>
-        <p class="cmd-rank">[Посада 2]</p>
-        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>[Цитата командира]</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
+        <h3 class="cmd-name">Мілан</h3>
+        <p class="cmd-rank">Начальник штабу, майор</p>
+        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>В Торецьку батальйон місяцями непохитно тримав позиції і завдав ворогу таких втрат, що навіки вписав своє ім'я в історію цієї битви.</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
         <button class="cmd-bio-btn" onclick="openCmdModal('cmd-2')">Читати біо</button>
       </div>
     </article>
 
-    <article class="cmd-card" data-rank="[Посада 3]">
+    <article class="cmd-card" data-rank="Командир роти БпАк, молодший лейтенант">
       <div class="cmd-photo">
         <div class="cmd-photo-overlay"></div>
-        <img class="bg" src="assets/images/commanders/cmd-3.webp" alt="Фото командира" onerror="this.style.display='none'"/>
-        <div class="cmd-badge"><img src="assets/images/ui/emblem-hero.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"/></div>
+        <img class="bg" src="media/c26d8e93-b0d4-4ea2-84ce-dbd93dc2641c.jpg" alt="Фото командира" onerror="this.style.display='none'">
+        <div class="cmd-badge"><img src="media/78ea24c7-02e9-4144-ad98-cf7769512fff.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"></div>
       </div>
       <div class="cmd-info">
-        <h3 class="cmd-name">[Ім’я 3]</h3>
-        <p class="cmd-rank">[Посада 3]</p>
-        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>[Цитата командира]</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
+        <h3 class="cmd-name">Чечен</h3>
+        <p class="cmd-rank">Командир роти БпАк, молодший лейтенант</p>
+        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>Тут бережуть людей.</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
         <button class="cmd-bio-btn" onclick="openCmdModal('cmd-3')">Читати біо</button>
       </div>
     </article>
@@ -371,10 +382,10 @@
     </div>
     <div class="car-controls rl-car-controls">
       <button class="car-btn prev off" id="rl-prev" onclick="rlMove(-1)" aria-label="Назад">
-        <svg><use href="#icon-arrow"/></svg>
+        <svg><use href="#icon-arrow" /></svg>
       </button>
       <button class="car-btn next" id="rl-next" onclick="carouselEdgeBtn(rlMove,'reels',1)" aria-label="Вперед">
-        <svg><use href="#icon-arrow"/></svg>
+        <svg><use href="#icon-arrow" /></svg>
       </button>
     </div>
   </div>
@@ -382,36 +393,36 @@
 
     <div class="reel-card" data-yt="">
       <div class="reel-thumb">
-        <img src="assets/images/reels/review-1.webp" alt="Відгук 1" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/reels/review-1.webp" alt="Відгук 1" onerror="this.style.background='rgba(255,255,255,.05)'">
         <iframe title="Відгук бійця 1" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
-        <div class="reel-play"><svg><use href="#icon-play"/></svg></div>
+        <div class="reel-play"><svg><use href="#icon-play" /></svg></div>
       </div>
       <div class="reel-caption"><p class="reel-name">[Ім’я 1]</p><p class="reel-role">[Підпис]</p></div>
     </div>
 
     <div class="reel-card" data-yt="">
       <div class="reel-thumb">
-        <img src="assets/images/reels/review-2.webp" alt="Відгук 2" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/reels/review-2.webp" alt="Відгук 2" onerror="this.style.background='rgba(255,255,255,.05)'">
         <iframe title="Відгук бійця 2" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
-        <div class="reel-play"><svg><use href="#icon-play"/></svg></div>
+        <div class="reel-play"><svg><use href="#icon-play" /></svg></div>
       </div>
       <div class="reel-caption"><p class="reel-name">[Ім’я 2]</p><p class="reel-role">[Підпис]</p></div>
     </div>
 
     <div class="reel-card" data-yt="">
       <div class="reel-thumb">
-        <img src="assets/images/reels/review-3.webp" alt="Відгук 3" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/reels/review-3.webp" alt="Відгук 3" onerror="this.style.background='rgba(255,255,255,.05)'">
         <iframe title="Відгук бійця 3" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
-        <div class="reel-play"><svg><use href="#icon-play"/></svg></div>
+        <div class="reel-play"><svg><use href="#icon-play" /></svg></div>
       </div>
       <div class="reel-caption"><p class="reel-name">[Ім’я 3]</p><p class="reel-role">[Підпис]</p></div>
     </div>
 
     <div class="reel-card" data-yt="">
       <div class="reel-thumb">
-        <img src="assets/images/reels/review-4.webp" alt="Відгук 4" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/reels/review-4.webp" alt="Відгук 4" onerror="this.style.background='rgba(255,255,255,.05)'">
         <iframe title="Відгук бійця 4" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
-        <div class="reel-play"><svg><use href="#icon-play"/></svg></div>
+        <div class="reel-play"><svg><use href="#icon-play" /></svg></div>
       </div>
       <div class="reel-caption"><p class="reel-name">[Ім’я 4]</p><p class="reel-role">[Підпис]</p></div>
     </div>
@@ -425,12 +436,12 @@
 <section class="jobs-sec" id="jobs">
   <div style="padding:var(--py) 0 16px" class="reveal car-title-block">
     <h2 class="sec-heading" style="text-box-trim:trim-both;text-box-edge:cap alphabetic">Вакансії</h2>
-    <p style="font-family:var(--f1);font-weight:500;color:var(--c-white);line-height:33px;text-box-trim:trim-end;text-box-edge:cap alphabetic" class="car-subtitle">[Підзаголовок розділу]</p>
+    <p style="font-family:var(--f1);font-weight:500;color:var(--c-white);line-height:33px;text-box-trim:trim-end;text-box-edge:cap alphabetic" class="car-subtitle">Обирай та заповнюй анкету.</p>
   </div>
   <template id="vacancy-card">
     <button type="button" class="job-card vis">
       <span class="job-bg">
-        <img alt="" onerror="this.style.display='none'"/>
+        <img alt="" onerror="this.style.display='none'">
         <span class="job-bg-grad"></span>
       </span>
       <span class="job-tag"></span>
@@ -438,88 +449,136 @@
       <span class="job-btn">Деталі та анкета <span>→</span></span>
     </button>
   </template>
-  <div class="jobs-grid" id="jobs-grid"></div>
+  <div class="jobs-grid" id="jobs-grid"><button data-vacancy-id="medical-driver" aria-label="Деталі вакансії «Водій-санітар»" type="button" class="job-card vis">
+      <span class="job-bg">
+        <img src="media/3638e42b-4ecb-400c-aa69-72326579b129.jpg" alt="" onerror="this.style.display='none'">
+        <span class="job-bg-grad"></span>
+      </span>
+      <span class="job-tag">Медичний пункт</span>
+      <span class="job-title">Водій-санітар</span>
+      <span class="job-btn">Деталі та анкета <span>→</span></span>
+    </button><button data-vacancy-id="legacy-2" aria-label="Деталі вакансії «Майстер ударних БпАк»" type="button" class="job-card vis">
+      <span class="job-bg">
+        <img src="media/b901ec5b-d8f1-4829-9c42-ec0114dbe48c.jpg" alt="" onerror="this.style.display='none'">
+        <span class="job-bg-grad"></span>
+      </span>
+      <span class="job-tag">Рота БПАК</span>
+      <span class="job-title">Майстер ударних БпАк</span>
+      <span class="job-btn">Деталі та анкета <span>→</span></span>
+    </button><button data-vacancy-id="legacy-3" aria-label="Деталі вакансії «Механік ударних Бпак»" type="button" class="job-card vis">
+      <span class="job-bg">
+        <img src="media/f3207865-ad98-4a8f-9576-051b489ea1f2.jpg" alt="" onerror="this.style.display='none'">
+        <span class="job-bg-grad"></span>
+      </span>
+      <span class="job-tag">Рота БПАК</span>
+      <span class="job-title">Механік ударних Бпак</span>
+      <span class="job-btn">Деталі та анкета <span>→</span></span>
+    </button><button data-vacancy-id="legacy-4" aria-label="Деталі вакансії «Розвідник-оператор »" type="button" class="job-card vis">
+      <span class="job-bg">
+        <img src="media/f8829898-3dcc-4407-9b53-1c1f1a1690a1.jpg" alt="" onerror="this.style.display='none'">
+        <span class="job-bg-grad"></span>
+      </span>
+      <span class="job-tag">Розвідувальний взвод</span>
+      <span class="job-title">Розвідник-оператор </span>
+      <span class="job-btn">Деталі та анкета <span>→</span></span>
+    </button><button data-vacancy-id="draft-5" aria-label="Деталі вакансії «Водій екскаватора»" type="button" class="job-card vis">
+      <span class="job-bg">
+        <img src="media/c7582d98-7e9d-4bbd-9b96-1a6d7cd93ec6.jpg" alt="" onerror="this.style.display='none'">
+        <span class="job-bg-grad"></span>
+      </span>
+      <span class="job-tag">Інженерно-саперний взвод</span>
+      <span class="job-title">Водій екскаватора</span>
+      <span class="job-btn">Деталі та анкета <span>→</span></span>
+    </button><button data-vacancy-id="draft-6" aria-label="Деталі вакансії «Оператор БПЛА»" type="button" class="job-card vis">
+      <span class="job-bg">
+        <img src="media/28d29182-18b6-4f32-8aef-3307fe2e1ef2.jpg" alt="" onerror="this.style.display='none'">
+        <span class="job-bg-grad"></span>
+      </span>
+      <span class="job-tag">Інженерно-саперний взвод</span>
+      <span class="job-title">Оператор БПЛА</span>
+      <span class="job-btn">Деталі та анкета <span>→</span></span>
+    </button></div>
 </section>
 
 <div class="section-divider"></div>
 
 <!-- ═══ FAQ ════════════════════════════════════════════ -->
 <section class="faq-sec" id="faq">
-  <div style="padding:var(--py) 0 30px" class="reveal"><h2 class="sec-heading">Часті запитання</h2></div>
+  <div style="padding:var(--py) 0 30px" class="reveal"><h2 class="sec-heading">Ні. Наша частина включена в перелік військових частин, які можуть призивати добровольців напряму, без ТЦК та СП.</h2></div>
   <div class="faq-grid">
     <div class="faq-col">
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 1]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Чи берете після СЗЧ?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Так, розглядаємо кандидатів після строкової служби чи СЗЧ. Головне — бажання та готовність служити.</p></div></div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 2]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Яка підготовка перед виконанням завдань?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Проводимо власні тренування: тактична підготовка, робота з БПЛА, медична підготовка. Кожен боєць проходить адаптацію до бойових завдань.</p></div></div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 3]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Контракт чи мобілізація?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Приймаємо і контрактників, і мобілізованих. Умови служби однакові для всіх.</p></div></div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 4]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Чи працюють відпустки?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Так, відповідно до законодавства України та внутрішнього розпорядку бригади.</p></div></div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 5]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Чи берете обмежено придатних?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Так, розглядаємо кандидатів з обмеженою придатністю залежно від військово-облікової спеціальності та потреб батальйону. Детальніше розповімо на співбесіді.</p></div></div>
       </div>
     </div>
 
     <div class="faq-col">
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 6]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Як перевестися до батальйону?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Заповніть анкету у розділі Вакансії. Наш представник зв'яжеться з вами та пояснить процедуру переведення.</p></div></div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 7]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Чи є тилові посади?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Так. Маємо потребу у водіях, медиках, логістах та спеціалістах технічного обслуговування.</p></div></div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 8]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Чи допомагаєте з переведенням з іншої частини?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Так, наші офіцери мають досвід оформлення переведень і допоможуть з процедурою.</p></div></div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 9]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">Чи забираєте з ТЦК?</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Так. Якщо вас вже поставили на облік у ТЦК, ми можемо допомогти з переведенням до нашого батальйону. Зв'яжіться з нами — розкажемо про порядок дій.</p></div></div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">
-          <span class="faq-q-text">[Запитання 10]</span>
-          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+          <span class="faq-q-text">ТВОЇ майбутні друзі</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow" /></svg></div>
         </div>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>вже тут</p></div></div>
       </div>
     </div>
   </div>
@@ -533,13 +592,13 @@
     <span class="friends-line friends-line2 reveal">[Підзаголовок]</span>
   </div>
   <div class="contacts-head reveal">
-    <h2 class="sec-heading">Контакти</h2>
+    <h2 class="sec-heading">Анкета відкриється в Google Forms.</h2>
     <a class="contacts-btn" href="https://docs.google.com/forms/d/1ExV2jJ9bbDuOV51WJdUhiMRHRv8LfsZ7qB9zt5IqTmc/preview" data-public-href="https://docs.google.com/forms/d/1ExV2jJ9bbDuOV51WJdUhiMRHRv8LfsZ7qB9zt5IqTmc/preview" target="_blank" rel="noopener">
       <span class="contacts-btn-text">Заповнити анкету</span>
       <span class="contacts-btn-arrow">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="2" y1="14" x2="13" y2="3" stroke="black" stroke-width="2.5" stroke-linecap="butt"/>
-          <polyline points="7,3 13,3 13,9" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter"/>
+          <line x1="2" y1="14" x2="13" y2="3" stroke="black" stroke-width="2.5" stroke-linecap="butt" />
+          <polyline points="7,3 13,3 13,9" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" />
         </svg>
       </span>
     </a>
@@ -551,9 +610,12 @@
     <div class="contacts-left-block">
       <div class="contacts-id">
         <div class="contacts-emblem">
-          <img src="assets/images/ui/emblem-contacts.svg" data-cms-linked-image="hero-emblem" alt="Емблема батальйону" onerror="this.style.display='none'"/>
+          <img src="media/78ea24c7-02e9-4144-ad98-cf7769512fff.svg" data-cms-linked-image="hero-emblem" alt="Емблема батальйону" onerror="this.style.display='none'">
         </div>
-        <div class="contacts-bn">2 Механізований<br>Батальйон</div>
+        <div class="contacts-bn">Окремої Президентської
+Бригади ім. Гетьмана
+Богдана Хмельницького
+<br>095 122 23 08</div>
       </div>
       <div class="contacts-brig-phone">
         <div class="contacts-brig">[Назва бригади]</div>
@@ -588,9 +650,9 @@
       </div>
     </div>
     <div class="modal-footer">
-      <a class="modal-anketa-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" onclick="closeModal()">
+      <a class="modal-anketa-btn" href="#" aria-disabled="true" data-pending-link="" target="_blank" rel="noopener" onclick="closeModal()">
         <span class="contacts-btn-text">Заповнити анкету</span>
-        <span class="contacts-btn-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="14" x2="13" y2="3" stroke="black" stroke-width="2.5" stroke-linecap="butt"/><polyline points="7,3 13,3 13,9" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter"/></svg></span>
+        <span class="contacts-btn-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="14" x2="13" y2="3" stroke="black" stroke-width="2.5" stroke-linecap="butt" /><polyline points="7,3 13,3 13,9" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" /></svg></span>
       </a>
       <span class="modal-anketa-hint">Посилання ще не додано.</span>
     </div>
@@ -622,8 +684,8 @@
 
 <script src="content.js"></script>
 <script src="content-snapshot.js"></script>
-<script src="content-runtime.js?v=2"></script>
+<script src="content-runtime.js?v=3"></script>
 <script src="app.js"></script>
 <script src="effects.js"></script>
-</body>
+</div></body>
 </html>
