@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <title>2 МБ | Робоча версія</title>
+  <meta name="description" content="Чернетка сайту 2 МБ">
+  <meta property="og:title" content="2 МБ | Робоча версія">
+  <meta property="og:image" content="assets/images/hero/hero-bg.jpg">
+<meta charset="utf-8"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="stylesheet" href="reset.css"/>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<canvas id="sparks-canvas"></canvas>
+<!-- ═══ SVG SPRITE ══════════════════════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><polyline points="9,6 15,12 9,18"/></symbol>
+  <symbol id="icon-play"  viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+</svg>
+<div class="page">
+
+<!-- ═══ HEADER ══════════════════════════════════════ -->
+<header class="header" id="hdr">
+  <div class="header-inner">
+    <a class="brand" href="#hero" aria-label="На головну" onclick="goTo('hero');return false">
+      <div class="brand-icon">
+        <img src="assets/images/ui/emblem-hero.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"/>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">2 Механізований Батальйон</span>
+        <span class="brand-sub">[Назва бригади]</span>
+      </div>
+    </a>
+
+    <nav class="nav" id="nav">
+      <button class="nav-btn" data-target="combat-system">Система бою</button>
+      <button class="nav-btn" data-target="combat-path">Бойовий шлях</button>
+      <button class="nav-btn" data-target="commanders">Командири</button>
+      <button class="nav-btn" data-target="reels">Відгуки</button>
+      <button class="nav-btn" data-target="jobs">Вакансії</button>
+      <button class="nav-btn" data-target="contacts">Контакти</button>
+    </nav>
+
+    <div class="social">
+      <a class="social-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/images/ui/telegram.svg" alt="Telegram"/></a>
+      <a class="social-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/images/ui/facebook.svg" alt="Facebook"/></a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Меню">
+      <div class="burger-lines"><span></span><span></span><span></span></div>
+    </button>
+  </div>
+</header>
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">[Цінність 1]</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">[Цінність 2]</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">[Цінність 3]</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">[Гасло]</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">[Цінність 1]</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">[Цінність 2]</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">[Цінність 3]</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">[Гасло]</span><span class="ticker-sep">·</span>
+  </div>
+</div>
+
+<div class="burger-overlay" id="burger-overlay" onclick="closeBurger()"></div>
+<nav class="burger-panel" id="burger-panel">
+  <button class="nav-btn" data-target="results" onclick="burgerNav(this)">Наші результати</button>
+  <button class="nav-btn" data-target="combat-system" onclick="burgerNav(this)">Система бою</button>
+  <button class="nav-btn" data-target="combat-path" onclick="burgerNav(this)">Бойовий шлях</button>
+  <button class="nav-btn" data-target="commanders" onclick="burgerNav(this)">Командири</button>
+  <button class="nav-btn" data-target="reels" onclick="burgerNav(this)">Відгуки</button>
+  <button class="nav-btn" data-target="jobs" onclick="burgerNav(this)">Вакансії</button>
+  <button class="nav-btn" data-target="faq" onclick="burgerNav(this)">Часті питання</button>
+  <button class="nav-btn" data-target="contacts" onclick="burgerNav(this)">Контакти</button>
+  <a class="burger-anketa" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" onclick="closeBurger()">Заповнити анкету</a>
+  <div class="burger-social">
+    <a class="social-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/images/ui/telegram.svg" alt="Telegram"/></a>
+    <a class="social-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/images/ui/facebook.svg" alt="Facebook"/></a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero">
+    <div class="hero-bg">
+      <img src="assets/images/hero/hero-bg.webp" alt="" onerror="this.parentNode.style.background='radial-gradient(ellipse at 50% 30%,rgba(100,80,30,.35) 0%,#0b0c0f 70%)'"/>
+      <div class="hero-bg-grad"></div>
+    </div>
+    <div class="hero-radial"></div>
+    <div class="hero-content">
+      <div class="hero-emblem">
+        <img src="assets/images/ui/emblem-hero.svg" alt="Емблема батальйону" onerror="this.style.display='none'"/>
+      </div>
+      <div class="hero-titles">
+        <h1 class="hero-h1">2 МЕХАНІЗОВАНИЙ БАТАЛЬЙОН</h1>
+        <p class="hero-hsub">[ПОВНА НАЗВА БРИГАДИ]</p>
+        <p class="hero-hsub-mobile">[Назва бригади]</p>
+      </div>
+      <div class="hero-values">
+        <div class="hero-row">
+          <span class="hero-val">[Цінність 1]</span>
+          <span class="hero-val">[Цінність 2]</span>
+          <span class="hero-val">[Цінність 3]</span>
+        </div>
+        <div class="hero-row"><span class="hero-seek">[Гасло]</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="page-wrap">
+<div class="section-divider"></div>
+
+<!-- ═══ RESULTS ══════════════════════════════════════ -->
+<section class="results-sec" id="results">
+  <div class="results-inner">
+    <div class="reveal"><h2 class="sec-heading">Наші результати</h2></div>
+    <div class="results-grid" id="results-grid">
+      <div class="stat">
+        <span class="stat-label">[Показник 1]</span>
+        <span class="stat-destroyed">[Опис]<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="—">—</span></div>
+      </div>
+      <div class="stat">
+        <span class="stat-label">[Показник 2]</span>
+        <span class="stat-destroyed">[Опис]<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="—">—</span></div>
+      </div>
+      <div class="stat">
+        <span class="stat-label">[Показник 3]</span>
+        <span class="stat-destroyed">[Опис]<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="—">—</span></div>
+      </div>
+      <div class="stat">
+        <span class="stat-label">[Показник 4]</span>
+        <span class="stat-destroyed">[Опис]<img src="assets/images/ui/results.png" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="—">—</span></div>
+      </div>
+      <div class="stat">
+        <span class="stat-label" data-cms-text="t1000">[Показник 5]</span>
+        <span class="stat-destroyed"><span data-cms-text="t1001">[Опис]</span><img src="assets/images/ui/results.png" data-cms-image="i1000" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="—" data-cms-text="t1002">—</span></div>
+      </div>
+      <div class="stat">
+        <span class="stat-label" data-cms-text="t1003">[Показник 6]</span>
+        <span class="stat-destroyed"><span data-cms-text="t1004">[Опис]</span><img src="assets/images/ui/results.png" data-cms-image="i1001" alt="" class="results-icon"></span>
+        <div class="stat-num"><span class="stat-num-inner" data-target="—" data-cms-text="t1005">—</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ COMBAT SYSTEM ════════════════════════════════ -->
+<section class="cs-sec" id="combat-system">
+  <div class="car-header">
+    <div class="car-title-block reveal">
+      <h2 class="sec-heading">Єдина Система Бою</h2>
+      <p style="font-family:var(--f1);font-weight:500;color:var(--c-white);line-height:33px" class="car-subtitle">[Підзаголовок розділу]</p>
+    </div>
+    <div class="car-controls">
+      <button class="car-btn prev off" id="cs-prev" onclick="csMove(-1)" aria-label="Назад">
+        <svg><use href="#icon-arrow"/></svg>
+      </button>
+      <div class="car-dots" id="cs-dots"></div>
+      <button class="car-btn next" id="cs-next" onclick="carouselEdgeBtn(csMove,'combat-system',1)" aria-label="Вперед">
+        <svg><use href="#icon-arrow"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="carousel">
+    <div class="c-track" id="cs-track">
+      <!-- Slide 1 -->
+      <div class="c-slide">
+        <img src="assets/images/gallery/system-1.webp" alt="Система бою 1" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/gallery/system-2.webp" alt="Система бою 2" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+      </div>
+      <!-- Slide 2 -->
+      <div class="c-slide">
+        <img src="assets/images/gallery/system-3.webp" alt="Система бою 3" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/gallery/system-4.webp" alt="Система бою 4" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+      </div>
+      <!-- Slide 3 -->
+      <div class="c-slide">
+        <img src="assets/images/gallery/system-5.webp" alt="Система бою 5" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/gallery/system-6.webp" alt="Система бою 6" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+      </div>
+    </div>
+  </div>
+  <div class="car-dots car-dots-m" id="cs-dots-m"></div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ COMBAT PATH ═══════════════════════════════════ -->
+<section class="cp-sec" id="combat-path">
+  <div class="car-header">
+    <h2 class="sec-heading reveal">Бойовий шлях</h2>
+    <div class="car-controls">
+      <button class="car-btn prev off" id="cp-prev" onclick="cpMove(-1)" aria-label="Назад">
+        <svg><use href="#icon-arrow"/></svg>
+      </button>
+      <div class="car-dots" id="cp-dots"></div>
+      <button class="car-btn next" id="cp-next" onclick="carouselEdgeBtn(cpMove,'combat-path',1)" aria-label="Вперед">
+        <svg><use href="#icon-arrow"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="timeline" id="timeline-scroll" tabindex="0" role="region" aria-label="Події бойового шляху">
+    <div class="tl-items" id="tl-items">
+      <div class="tl-line"></div>
+      <div class="tl-item">
+        <span class="tl-name">[Подія 1]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date">[Дата]</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-name">[Подія 2]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date">[Дата]</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-name">[Подія 3]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date">[Дата]</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-name">[Подія 4]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date">[Дата]</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-name" data-cms-text="t1010">[Подія 5]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date" data-cms-text="t1011">[Дата]</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-name" data-cms-text="t1012">[Подія 6]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date" data-cms-text="t1013">[Дата]</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-name" data-cms-text="t1014">[Подія 7]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date" data-cms-text="t1015">[Дата]</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-name" data-cms-text="t1016">[Подія 8]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date" data-cms-text="t1017">[Дата]</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-name" data-cms-text="t1018">[Подія 9]</span>
+        <span class="tl-dot"></span>
+        <span class="tl-date" data-cms-text="t1019">[Дата]</span>
+      </div>
+      <div class="tl-item tl-ongoing">
+        <span class="tl-name">Боротьба
+продовжується</span>
+        <span class="tl-dot" aria-hidden="true"></span>
+        <span class="tl-date" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="carousel" style="margin-top:40px">
+    <div class="c-track" id="cp-track">
+      <!-- Slide 1 -->
+      <div class="c-slide">
+        <img src="assets/images/gallery/path-1.webp" alt="Бойовий шлях 1" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/gallery/path-2.webp" alt="Бойовий шлях 2" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+      </div>
+      <!-- Slide 2 -->
+      <div class="c-slide">
+        <img src="assets/images/gallery/path-3.webp" alt="Бойовий шлях 3" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/gallery/path-4.webp" alt="Бойовий шлях 4" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+      </div>
+      <!-- Slide 3 -->
+      <div class="c-slide">
+        <img src="assets/images/gallery/path-5.webp" alt="Бойовий шлях 5" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <img src="assets/images/gallery/path-6.webp" alt="Бойовий шлях 6" onerror="this.style.background='rgba(255,255,255,.04)'"/>
+      </div>
+    </div>
+  </div>
+  <div class="car-dots car-dots-m" id="cp-dots-m"></div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ COMMANDERS ════════════════════════════════════ -->
+<section class="cmd-sec" id="commanders">
+  <div class="cmd-head reveal">
+    <div class="cmd-head-titles">
+      <h2 class="sec-heading">Наші командири</h2>
+      <p class="cmd-m-subtitle" id="cmd-subtitle">[Посада 1]</p>
+    </div>
+    <div class="car-controls cmd-car-controls">
+      <button class="car-btn prev off" id="cmd-prev" onclick="cmdMove(-1)" aria-label="Назад">
+        <svg><use href="#icon-arrow"/></svg>
+      </button>
+      <button class="car-btn next" id="cmd-next" onclick="carouselEdgeBtn(cmdMove,'commanders',1)" aria-label="Вперед">
+        <svg><use href="#icon-arrow"/></svg>
+      </button>
+    </div>
+    <div class="car-dots cmd-dots-m" id="cmd-dots-m"></div>
+  </div>
+  <div class="cmd-list" id="cmd-list">
+
+    <article class="cmd-card" data-rank="[Посада 1]">
+      <div class="cmd-photo">
+        <div class="cmd-photo-overlay"></div>
+        <img class="bg" src="assets/images/commanders/cmd-1.webp" alt="Фото командира" onerror="this.style.display='none'"/>
+        <div class="cmd-badge"><img src="assets/images/ui/emblem-hero.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"/></div>
+      </div>
+      <div class="cmd-info">
+        <h3 class="cmd-name">[Ім’я 1]</h3>
+        <p class="cmd-rank">[Посада 1]</p>
+
+        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>[Цитата командира]</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
+        <button class="cmd-bio-btn" onclick="openCmdModal('cmd-1')">Читати біо</button>
+      </div>
+    </article>
+
+    <article class="cmd-card" data-rank="[Посада 2]">
+      <div class="cmd-photo">
+        <div class="cmd-photo-overlay"></div>
+        <img class="bg" src="assets/images/commanders/cmd-2.webp" alt="Фото командира" onerror="this.style.display='none'"/>
+        <div class="cmd-badge"><img src="assets/images/ui/emblem-hero.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"/></div>
+      </div>
+      <div class="cmd-info">
+        <h3 class="cmd-name">[Ім’я 2]</h3>
+        <p class="cmd-rank">[Посада 2]</p>
+        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>[Цитата командира]</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
+        <button class="cmd-bio-btn" onclick="openCmdModal('cmd-2')">Читати біо</button>
+      </div>
+    </article>
+
+    <article class="cmd-card" data-rank="[Посада 3]">
+      <div class="cmd-photo">
+        <div class="cmd-photo-overlay"></div>
+        <img class="bg" src="assets/images/commanders/cmd-3.webp" alt="Фото командира" onerror="this.style.display='none'"/>
+        <div class="cmd-badge"><img src="assets/images/ui/emblem-hero.svg" data-cms-linked-image="hero-emblem" alt="" onerror="this.style.display='none'"/></div>
+      </div>
+      <div class="cmd-info">
+        <h3 class="cmd-name">[Ім’я 3]</h3>
+        <p class="cmd-rank">[Посада 3]</p>
+        <blockquote class="cmd-quote"><img class="cmd-quote-mark" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"><p>[Цитата командира]</p><img class="cmd-quote-mark-close" src="assets/images/quote-marks.svg" alt="" aria-hidden="true"></blockquote>
+        <button class="cmd-bio-btn" onclick="openCmdModal('cmd-3')">Читати біо</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ REELS ══════════════════════════════════════════ -->
+<section class="reels-sec" id="reels">
+  <div class="rl-head reveal">
+    <div class="car-title-block">
+      <h2 class="sec-heading">Чому саме ми<span class="rl-title-ext">, відгуки бійців</span></h2>
+      <p class="car-subtitle rl-subtitle" style="font-family:var(--f1);font-weight:500;color:var(--c-white);line-height:33px">Відгуки бійців</p>
+    </div>
+    <div class="car-controls rl-car-controls">
+      <button class="car-btn prev off" id="rl-prev" onclick="rlMove(-1)" aria-label="Назад">
+        <svg><use href="#icon-arrow"/></svg>
+      </button>
+      <button class="car-btn next" id="rl-next" onclick="carouselEdgeBtn(rlMove,'reels',1)" aria-label="Вперед">
+        <svg><use href="#icon-arrow"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="reels-grid" id="rl-grid">
+
+    <div class="reel-card" data-yt="">
+      <div class="reel-thumb">
+        <img src="assets/images/reels/review-1.webp" alt="Відгук 1" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <iframe title="Відгук бійця 1" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+        <div class="reel-play"><svg><use href="#icon-play"/></svg></div>
+      </div>
+      <div class="reel-caption"><p class="reel-name">[Ім’я 1]</p><p class="reel-role">[Підпис]</p></div>
+    </div>
+
+    <div class="reel-card" data-yt="">
+      <div class="reel-thumb">
+        <img src="assets/images/reels/review-2.webp" alt="Відгук 2" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <iframe title="Відгук бійця 2" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+        <div class="reel-play"><svg><use href="#icon-play"/></svg></div>
+      </div>
+      <div class="reel-caption"><p class="reel-name">[Ім’я 2]</p><p class="reel-role">[Підпис]</p></div>
+    </div>
+
+    <div class="reel-card" data-yt="">
+      <div class="reel-thumb">
+        <img src="assets/images/reels/review-3.webp" alt="Відгук 3" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <iframe title="Відгук бійця 3" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+        <div class="reel-play"><svg><use href="#icon-play"/></svg></div>
+      </div>
+      <div class="reel-caption"><p class="reel-name">[Ім’я 3]</p><p class="reel-role">[Підпис]</p></div>
+    </div>
+
+    <div class="reel-card" data-yt="">
+      <div class="reel-thumb">
+        <img src="assets/images/reels/review-4.webp" alt="Відгук 4" onerror="this.style.background='rgba(255,255,255,.05)'"/>
+        <iframe title="Відгук бійця 4" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+        <div class="reel-play"><svg><use href="#icon-play"/></svg></div>
+      </div>
+      <div class="reel-caption"><p class="reel-name">[Ім’я 4]</p><p class="reel-role">[Підпис]</p></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ JOBS ═══════════════════════════════════════════ -->
+<section class="jobs-sec" id="jobs">
+  <div style="padding:var(--py) 0 16px" class="reveal car-title-block">
+    <h2 class="sec-heading" style="text-box-trim:trim-both;text-box-edge:cap alphabetic">Вакансії</h2>
+    <p style="font-family:var(--f1);font-weight:500;color:var(--c-white);line-height:33px;text-box-trim:trim-end;text-box-edge:cap alphabetic" class="car-subtitle">[Підзаголовок розділу]</p>
+  </div>
+  <template id="vacancy-card">
+    <button type="button" class="job-card vis">
+      <span class="job-bg">
+        <img alt="" onerror="this.style.display='none'"/>
+        <span class="job-bg-grad"></span>
+      </span>
+      <span class="job-tag"></span>
+      <span class="job-title"></span>
+      <span class="job-btn">Деталі та анкета <span>→</span></span>
+    </button>
+  </template>
+  <div class="jobs-grid" id="jobs-grid"></div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══ FAQ ════════════════════════════════════════════ -->
+<section class="faq-sec" id="faq">
+  <div style="padding:var(--py) 0 30px" class="reveal"><h2 class="sec-heading">Часті запитання</h2></div>
+  <div class="faq-grid">
+    <div class="faq-col">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 1]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 2]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 3]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 4]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 5]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+    </div>
+
+    <div class="faq-col">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 6]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 7]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 8]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 9]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span class="faq-q-text">[Запитання 10]</span>
+          <div class="faq-icon"><svg><use href="#icon-arrow"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>[Відповідь]</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACTS ════════════════════════════════════════ -->
+<div class="section-divider"></div>
+<section class="contacts-sec" id="contacts">
+  <div class="friends-heading">
+    <span class="friends-line reveal">[Заголовок]</span>
+    <span class="friends-line friends-line2 reveal">[Підзаголовок]</span>
+  </div>
+  <div class="contacts-head reveal">
+    <h2 class="sec-heading">Контакти</h2>
+    <a class="contacts-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener">
+      <span class="contacts-btn-text">Заповнити анкету</span>
+      <span class="contacts-btn-arrow">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="2" y1="14" x2="13" y2="3" stroke="black" stroke-width="2.5" stroke-linecap="butt"/>
+          <polyline points="7,3 13,3 13,9" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter"/>
+        </svg>
+      </span>
+    </a>
+    <span class="contacts-anketa-hint">Посилання ще не додано.</span>
+  </div>
+  <div class="contacts-row reveal">
+
+    <!-- Ембл + назва + бригада + телефон -->
+    <div class="contacts-left-block">
+      <div class="contacts-id">
+        <div class="contacts-emblem">
+          <img src="assets/images/ui/emblem-contacts.svg" data-cms-linked-image="hero-emblem" alt="Емблема батальйону" onerror="this.style.display='none'"/>
+        </div>
+        <div class="contacts-bn">2 Механізований<br>Батальйон</div>
+      </div>
+      <div class="contacts-brig-phone">
+        <div class="contacts-brig">[Назва бригади]</div>
+        <div class="contacts-phone-block">
+          <a class="contacts-phone" href="#" aria-disabled="true" data-pending-link>[Номер телефону]</a>
+          <div class="contacts-recruiter-label">Рекрутер</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<!-- ═══ MODAL ════════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="closeModalOutside(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-sub" id="modal-sub"></div>
+    </div>
+    <div class="modal-scroll" id="modal-scroll">
+      <div class="modal-reqs" hidden>
+        <div class="modal-reqs-label">Обов’язки</div>
+        <ul class="modal-reqs-list" id="modal-duties-list"></ul>
+      </div>
+      <div class="modal-reqs">
+        <div class="modal-reqs-label">Вимоги</div>
+        <ul class="modal-reqs-list" id="modal-reqs-list"></ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-anketa-btn" href="#" aria-disabled="true" data-pending-link target="_blank" rel="noopener" onclick="closeModal()">
+        <span class="contacts-btn-text">Заповнити анкету</span>
+        <span class="contacts-btn-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="14" x2="13" y2="3" stroke="black" stroke-width="2.5" stroke-linecap="butt"/><polyline points="7,3 13,3 13,9" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter"/></svg></span>
+      </a>
+      <span class="modal-anketa-hint">Посилання ще не додано.</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="cmd-modal" onclick="closeCmdModalOutside(event)">
+  <div class="modal-box cmd-modal-box">
+    <div class="cmd-modal-header">
+      <div class="cmd-modal-header-info">
+        <div class="modal-title" id="cmd-modal-name"></div>
+        <div class="modal-sub" id="cmd-modal-rank"></div>
+      </div>
+      <button class="modal-close" onclick="closeCmdModal()">✕</button>
+    </div>
+    <button class="modal-close cmd-modal-close-m" onclick="closeCmdModal()">✕</button>
+    <div class="cmd-modal-body">
+      <div class="cmd-modal-fade"></div>
+      <div class="cmd-modal-photo-wrap" id="cmd-modal-photo-wrap"></div>
+      <div class="cmd-modal-body-info">
+        <div class="modal-title cmd-modal-body-name" id="cmd-modal-name-m"></div>
+        <div class="modal-sub cmd-modal-body-rank" id="cmd-modal-rank-m"></div>
+      </div>
+      <div class="cmd-modal-bio-text" id="cmd-modal-bio"></div>
+      <div class="cmd-modal-fade-bottom"></div>
+    </div>
+  </div>
+</div>
+
+<script src="content.js"></script>
+<script src="content-snapshot.js"></script>
+<script src="content-runtime.js"></script>
+<script src="app.js"></script>
+<script src="effects.js"></script>
+</body>
+</html>
